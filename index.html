@@ -180,21 +180,20 @@
         </div>
     </section>
 
-    <!-- Preço -->
-<section id="pricing">
+    <!-- Formulário de Contato -->
+<section id="contact">
     <div class="container">
-        <h2>Escolha o Seu Plano</h2>
-        <p>Adquira uma licença vitalícia com suporte contínuo e atualizações gratuitas.</p>
-        <div class="pricing-cards">
-            <div class="card">
-                <h3>Versão Completa</h3>
-                <p><strong>US$ 69</strong> - Licença vitalícia</p>
-                <!-- Alteração feita aqui. O link agora abre o e-mail com predefinido -->
-                <a href="mailto:joelsonforte.br@gmail.com?subject=Compra Auto Captions for Vegas&body=Olá, gostaria de comprar a versão completa do Auto Captions for Vegas. Por favor, envie a fatura e as instruções de pagamento." class="btn-primary">Comprar Agora</a>
-            </div>
-        </div>
+        <h2>Entre em Contato</h2>
+        <p>Para adquirir a versão completa, preencha o formulário abaixo e entraremos em contato com você.</p>
+        <form action="seu-endpoint-de-contato" method="POST">
+            <input type="text" name="name" placeholder="Seu nome" required><br>
+            <input type="email" name="email" placeholder="Seu e-mail" required><br>
+            <textarea name="message" placeholder="Mensagem (opcional)" rows="5"></textarea><br>
+            <button type="submit" class="btn-primary">Enviar Solicitação</button>
+        </form>
     </div>
 </section>
+
 
     <!-- Call to Action Final -->
     <footer>
