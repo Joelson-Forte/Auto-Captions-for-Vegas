@@ -10,13 +10,15 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Hero Section */
 #hero {
     background-color: #1a1a1a;
     color: #fff;
-    padding: 100px 0;
+    padding: 100px 20px;
     text-align: center;
 }
 
@@ -37,16 +39,25 @@ body {
     text-decoration: none;
     font-size: 1.1rem;
     border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
+.btn-primary:hover {
+    background-color: #008080;
+}
+
+/* Sessões principais */
 #demo, #features, #pricing {
-    padding: 50px 0;
+    padding: 50px 20px;
     text-align: center;
 }
 
 /* Demonstração */
 iframe {
     border: none;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Funcionalidades */
@@ -63,8 +74,10 @@ ul li {
 /* Cards de Preço */
 .pricing-cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 0 20px;
 }
 
 .card {
@@ -73,6 +86,7 @@ ul li {
     width: 300px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .card h3 {
@@ -85,6 +99,7 @@ ul li {
     margin-bottom: 20px;
 }
 
+/* Rodapé */
 footer {
     background-color: #333;
     padding: 20px;
@@ -97,4 +112,10 @@ footer .btn-secondary {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+footer .btn-secondary:hover {
+    background-color: #e04e2a;
 }
