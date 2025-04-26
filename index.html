@@ -5,171 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Auto Captions for Vegas - Professional audio transcription and subtitles creation for Vegas Pro." />
     <title>Auto Captions for Vegas</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <style>
-        /* Reset and base layout */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Posicionamento da logo */
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+        .logo-container img {
+            height: 60px;
         }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Hero Section */
+        /* Garante que a logo fique visível sobre o hero */
         #hero {
-            background-color: #007BFF;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        #hero h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        #hero p {
-            font-size: 1.2rem;
-        }
-
-        .btn-primary {
-            background-color: #fff;
-            color: #007BFF;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-            color: white;
-        }
-
-        /* Demo */
-        #demo {
-            text-align: center;
-            margin-top: 40px;
-            padding: 50px 0;
-        }
-
-        #demo iframe {
-            width: 100%;
-            max-width: 800px;
-            height: 450px;
-            margin: 0 auto;
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            #demo iframe {
-                height: 300px;
-            }
-        }
-
-        /* Features */
-        #features {
-            background-color: #f9f9f9;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        #features ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #features li {
-            font-size: 1.1rem;
-            margin: 10px 0;
-        }
-
-        /* Pricing */
-        #pricing {
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .pricing-cards {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .pricing-cards .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            text-align: center;
-        }
-
-        .pricing-cards .card h3 {
-            margin-bottom: 15px;
-        }
-
-        /* Contact Form */
-        #contact {
-            background-color: #ffffff;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        #contact form input,
-        #contact form textarea {
-            width: 100%;
-            max-width: 500px;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        #contact form button {
-            margin-top: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .btn-secondary {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .btn-secondary:hover {
-            background-color: #218838;
+            position: relative;
         }
     </style>
 </head>
 <body>
     <!-- Hero -->
     <header id="hero">
+        <!-- Logo no topo esquerdo -->
+        <div class="logo-container">
+            <img src="log.png" alt="Logo">
+        </div>
+
         <div class="container">
             <h1>Auto Captions for Vegas</h1>
             <p>Professional audio transcription and subtitle creation for VEGAS Pro.</p>
@@ -246,10 +108,10 @@
     </section>
 
     <!-- Footer -->
-<footer>
-    <div class="container">
-        <!-- <a href="mailto:joelsonforte.br@gmail.com" class="btn-secondary">Contact Us</a> -->
-    </div>
-</footer>
+    <footer>
+        <div class="container">
+            <!-- <a href="mailto:joelsonforte.br@gmail.com" class="btn-secondary">Contact Us</a> -->
+        </div>
+    </footer>
 </body>
 </html>
