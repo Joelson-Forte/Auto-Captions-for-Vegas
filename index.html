@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Auto Captions for Vegas - Transcrição automática e legendas no Vegas Pro.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Auto Captions for Vegas - Transcrição automática e legendas no Vegas Pro." />
     <title>Auto Captions for Vegas</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        /* Reset e layout base */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
         }
 
         .container {
@@ -20,26 +27,7 @@
             padding: 20px;
         }
 
-        #demo {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        #demo iframe {
-            width: 100%;
-            max-width: 800px;
-            height: 450px;
-            margin: 0 auto;
-            display: block;
-        }
-
-        @media (max-width: 768px) {
-            #demo iframe {
-                width: 100%;
-                height: 300px;
-            }
-        }
-
+        /* Hero Section */
         #hero {
             background-color: #007BFF;
             color: white;
@@ -72,6 +60,28 @@
             color: white;
         }
 
+        /* Demonstração */
+        #demo {
+            text-align: center;
+            margin-top: 40px;
+            padding: 50px 0;
+        }
+
+        #demo iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            #demo iframe {
+                height: 300px;
+            }
+        }
+
+        /* Funcionalidades */
         #features {
             background-color: #f9f9f9;
             padding: 50px 0;
@@ -88,6 +98,7 @@
             margin: 10px 0;
         }
 
+        /* Preço */
         #pricing {
             padding: 50px 0;
             text-align: center;
@@ -97,6 +108,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
+            flex-wrap: wrap;
         }
 
         .pricing-cards .card {
@@ -112,6 +124,28 @@
             margin-bottom: 15px;
         }
 
+        /* Formulário de Contato */
+        #contact {
+            background-color: #ffffff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        #contact form input,
+        #contact form textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #contact form button {
+            margin-top: 10px;
+        }
+
+        /* Footer */
         footer {
             background-color: #333;
             color: white;
@@ -134,7 +168,7 @@
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
+    <!-- Hero -->
     <header id="hero">
         <div class="container">
             <h1>Auto Captions for Vegas</h1>
@@ -155,7 +189,7 @@
         <div class="container">
             <h2>Veja em Ação</h2>
             <p>Assista como o Auto Captions for Vegas transforma vídeos automaticamente em legendas de forma rápida e precisa.</p>
-            <iframe src="https://www.youtube.com/embed/7jLTc719Km8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/7jLTc719Km8" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -203,7 +237,7 @@
         </div>
     </section>
 
-    <!-- Call to Action Final -->
+    <!-- Rodapé -->
     <footer>
         <div class="container">
             <a href="mailto:joelsonforte.br@gmail.com" class="btn-secondary">Entre em Contato</a>
