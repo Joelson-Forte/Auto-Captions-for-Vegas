@@ -27,26 +27,39 @@
             padding: 20px;
         }
 
-        /* Header with logo */
+        /* Header with logo and text */
         header {
             background-color: #007BFF;
             color: white;
             padding: 40px 0;
-            text-align: center;
         }
 
-        header img {
-            max-width: 150px; /* Ajuste o tamanho da sua logo conforme necessário */
-            margin-bottom: 20px;
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        #hero h1 {
-            margin: 0;
+        .header-flex img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .hero-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero-text h1 {
             font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
-        #hero p {
+        .hero-text p {
             font-size: 1.2rem;
+            margin-bottom: 20px;
         }
 
         .btn-primary {
@@ -57,35 +70,46 @@
             border-radius: 5px;
             font-weight: bold;
             display: inline-block;
-            margin-top: 20px;
         }
 
         .btn-primary:hover {
             background-color: #0056b3;
             color: white;
         }
-        /* Estilos restantes... */
+
+        @media (max-width: 768px) {
+            .header-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Hero -->
+    <!-- Header / Hero -->
     <header>
-        <div class="container">
-            <img src="https://github.com/Joelson-Forte/Auto-Captions-for-Vegas/blob/main/images/logo.png?raw=true" alt="Logo" /> <!-- Logo -->
-            <h1>Auto Captions for Vegas</h1>
-            <p>Professional audio transcription and subtitle creation for VEGAS Pro.</p>
-            <a 
-                class="btn-primary" 
-                href="https://huggingface.co/datasets/Joelson-Forte/Auto-Captions-for-Vegas/resolve/main/Auto_Captions_for_Vegas_v2.0.4.1.zip?download=true"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Download Trial Version
-            </a>
+        <div class="container header-flex">
+            <img src="https://github.com/Joelson-Forte/Auto-Captions-for-Vegas/blob/main/images/logo.png?raw=true" alt="Logo" />
+            <div class="hero-text">
+                <h1>Auto Captions for Vegas</h1>
+                <p>Professional audio transcription and subtitle creation for VEGAS Pro.</p>
+                <a 
+                    class="btn-primary" 
+                    href="https://huggingface.co/datasets/Joelson-Forte/Auto-Captions-for-Vegas/resolve/main/Auto_Captions_for_Vegas_v2.0.4.1.zip?download=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Download Trial Version
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Demonstração -->
+    <!-- Demo Section -->
     <section id="demo">
         <div class="container">
             <h2>See it in Action</h2>
@@ -93,7 +117,5 @@
             <iframe src="https://www.youtube.com/embed/7jLTc719Km8" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
-
-    <!-- Outros conteúdos -->
 </body>
 </html>
