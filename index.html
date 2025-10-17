@@ -81,7 +81,7 @@
             }
         }
 
-        /* Features */
+        /* Features (kept for structure, but new structure is below) */
         #features {
             background-color: #f9f9f9;
             padding: 50px 0;
@@ -96,6 +96,43 @@
         #features li {
             font-size: 1.1rem;
             margin: 10px 0;
+        }
+
+        /* Auto Captions Features (New Detailed Features Section) */
+        #auto-captions-features { /* Renamed from #demucs-stems */
+            background-color: #ffffff;
+            padding: 50px 0;
+            text-align: left;
+        }
+
+        #auto-captions-features .feature-block { /* Renamed from .demucs-block */
+            margin-bottom: 40px;
+        }
+
+        #auto-captions-features h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #auto-captions-features h3 {
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+
+        #auto-captions-features h4 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        #auto-captions-features ul {
+            margin-left: 20px;
+            padding-left: 0;
+            list-style-type: disc;
+        }
+
+        #auto-captions-features li {
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
 
         /* Pricing */
@@ -168,11 +205,10 @@
     </style>
 </head>
 <body>
-    <!-- Hero -->
     <header id="hero">
         <div class="container">
             <h1>Auto Captions for VEGAS Pro</h1>
-            <p>Professional Audio Tanscription and Subtitle Creation</p>
+            <p>Professional Audio Transcription and Subtitle Creation</p>
             <a 
                 class="btn-primary" 
                 href="https://huggingface.co/datasets/Joelson-Forte/Auto-Captions-for-Vegas/resolve/main/Auto_Captions_for_Vegas_v2.0.6.zip?download=true"
@@ -184,68 +220,86 @@
         </div>
     </header>
 
-    <!-- Demo -->
     <section id="demo">
         <div class="container">
             <h2>See Auto Captions for VEGAS Pro in Action</h2>
-            <!-- p>Auto Captions for VEGAS transcribes audio to subtitles quickly and accurately in your edits.</p -->
             <iframe src="https://www.youtube.com/embed/yzWAXhiRVoM" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
-    <!-- Features -->
-    <section id="features">
+    <section id="auto-captions-features">
         <div class="container">
-            <h2>Key Features</h2>
-            <ul>
-                <li>Compatible with Vegas Pro 14 or higher</li>
-                <li>No internet required to function</li>
-                <li>No character limits on transcription</li>
-                <li>Automatic language recognition</li>
-                <li>Support for CPU and GPU (NVIDIA CUDA)</li>
-                <li>Create Subtile Animation using Aegisub Integration</li>
-                <li>Edit Captions using Subtitle Edit Integration</li>
-                <li>Batch transcription support</li>
-                <li>Selected events transcription</li>
-                <li>Timeline selection transcription</li>
-                <li>Region markers transcription</li>
-                <li>Translate subtitles into other languages</li>
-                <li>Transcribe musics with Auto Lyrics</li> 
-                <li>Import and export subtitles</li> 
-                <li>Import Subtitles as video to timeline</li> 
-                <li>Find and replace subtitles</li>           
-                <li>Lifetime license with free updates</li>
-                <li>Help tutorial included</li>
-            </ul>
+            <h2>✨ Key Features of Auto Captions for VEGAS Pro</h2>
+
+            <div class="feature-block">
+                <h3>High-Performance & Offline Capability</h3>
+                <p>Auto Captions is built for speed, offering top-tier transcription quality while guaranteeing your privacy with 100% offline functionality.</p>
+                <h4>Performance Highlights:</h4>
+                <ul>
+                    <li>⚡ **GPU Acceleration**: Supports **NVIDIA CUDA GPUs** for significantly faster processing.</li>
+                    <li>💻 **CPU Support**: Works reliably on systems without a dedicated NVIDIA GPU.</li>
+                    <li>🌐 **100% Offline**: **No internet connection required** after installation. Transcribe sensitive content privately.</li>
+                    <li>🚫 **No Limits**: **No character or time limits** on transcription.</li>
+                </ul>
+            </div>
+            
+            <div class="feature-block">
+                <h3>Advanced Subtitle Creation & Translation</h3>
+                <p>Go beyond simple transcription by integrating powerful third-party tools and translating subtitles into other languages easily.</p>
+                <h4>Creative Workflow:</h4>
+                <ul>
+                    <li>🎥 **Subtitle Animation**: Create amazing subtitle animations using **Aegisub Integration**.</li>
+                    <li>📝 **Caption Editing**: Fine-tune your captions with the robust features of **Subtitle Edit Integration**.</li>
+                    <li>🌎 **Translation**: Easily **translate subtitles** into multiple languages.</li>
+                    <li>🎵 **Auto Lyrics**: Transcribe musical tracks with specialized Auto Lyrics mode.</li>
+                </ul>
+            </div>
+
+            <div class="feature-block">
+                <h3>Flexible Transcription Workflow in VEGAS Pro</h3>
+                <p>Choose exactly which part of your project to transcribe, providing maximum control and efficiency in your editing process.</p>
+                <h4>Timeline Processing Options:</h4>
+                <ul>
+                    <li>✅ **Selected Events**: Process multiple **selected audio/video events** simultaneously.</li>
+                    <li>⏱️ **Timeline Selection**: Transcribe only the specific area defined by the **Timeline Selection** (Loop Region).</li>
+                    <li>🏷️ **Region Markers**: Use defined **Region Markers** for segmented batch processing.</li>
+                    <li>📦 **Batch Transcription**: Process an entire sequence of events or separate files.</li>
+                </ul>
+            </div>
+
+            <div class="feature-block">
+                <h3>Compatibility & License</h3>
+                <p>Ensure compatibility with your version of VEGAS Pro and benefit from a long-term license.</p>
+                <h4>Details:</h4>
+                <ul>
+                    <li>⚙️ **Compatibility**: Works with **VEGAS Pro 14 or higher**.</li>
+                    <li>🔑 **License**: **Lifetime license** with **free updates**.</li>
+                    <li>📖 **Support**: Help tutorial included to get you started quickly.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Pricing -->
     <section id="pricing">
         <div class="container">
             <h2>Get it Now</h2>
-            <!-- p>Get a lifetime license with continuous support and free updates.</p -->
             <div class="pricing-cards">
                 <div class="card">
                     <h3>Full Version</h3>
                     <p><strong>US$ 49</strong> - Lifetime license</p>
                     <p>Please send a message to confirm your order. A PayPal invoice will be emailed to you, and your serial number will be sent after payment is confirmed.</p>
-                    <!-- a href="https://www.paypal.com" class="btn-primary">Buy Now</a -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form -->
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <!-- p>Your Text Here.</p -->            
             <form action="https://formspree.io/f/xvgagnja" method="POST">
                 <input type="hidden" name="_captcha" value="false">
                 
-                <!-- Título personalizado do e-mail -->
-                <input type="hidden" name="_subject" value="Auto Captions for VEGAS Pro Purchase">
+                <input type="hidden" name="_subject" value="Auto Captions for VEGAS Pro Purchase/Support">
                 
                 <input type="text" name="name" placeholder="Your name" required><br>
                 <input type="email" name="email" placeholder="Your email" required><br>
@@ -255,13 +309,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
-<footer>
-    <div class="container">
-        <!-- <a href="mailto:joelsonforte.br@gmail.com" class="btn-secondary">Contact Us</a> -->
-    </div>
-</footer>
+    <footer>
+        <div class="container">
+            <p>Contact: autocaptions.vegaspro.support@gmail.com</p>
+        </div>
+    </footer>
 </body>
 </html>
-
-
