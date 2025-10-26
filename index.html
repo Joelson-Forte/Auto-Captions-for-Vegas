@@ -14,10 +14,11 @@
             box-sizing: border-box;
         }
 
+        /* Fundo e texto principal */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #121212; /* Fundo escuro */
+            color: #e0e0e0; /* Texto claro */
             line-height: 1.6;
         }
 
@@ -29,8 +30,8 @@
 
         /* Hero Section */
         #hero {
-            background-color: #000;
-            color: white;
+            background-color: #000; /* Preto */
+            color: #fff;
             padding: 40px 0;
             text-align: center;
         }
@@ -42,22 +43,24 @@
 
         #hero p {
             font-size: 1.2rem;
+            color: #ccc;
         }
 
         .btn-primary {
-            background-color: #fff;
-            color: #007BFF;
+            background-color: #1e90ff; /* Azul vivo */
+            color: #fff;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
             display: inline-block;
             margin-top: 20px;
+            transition: background 0.3s ease;
         }
 
         .btn-primary:hover {
-            background-color: #0056b3;
-            color: white;
+            background-color: #0b60d1;
+            color: #fff;
         }
 
         /* Demo */
@@ -65,6 +68,12 @@
             text-align: center;
             margin-top: 40px;
             padding: 50px 0;
+            background-color: #1e1e1e; /* Seção levemente destacada */
+        }
+
+        #demo h2 {
+            color: #fff;
+            margin-bottom: 30px;
         }
 
         #demo iframe {
@@ -73,6 +82,8 @@
             height: 450px;
             margin: 0 auto;
             display: block;
+            border-radius: 8px;
+            border: 2px solid #333;
         }
 
         @media (max-width: 768px) {
@@ -81,64 +92,52 @@
             }
         }
 
-        /* Features (kept for structure, but new structure is below) */
-        #features {
-            background-color: #f9f9f9;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        #features ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #features li {
-            font-size: 1.1rem;
-            margin: 10px 0;
-        }
-
-        /* Auto Captions Features (New Detailed Features Section) */
-        #auto-captions-features { /* Renamed from #demucs-stems */
-            background-color: #ffffff;
+        /* Features */
+        #auto-captions-features {
+            background-color: #181818;
             padding: 50px 0;
             text-align: left;
-        }
-
-        #auto-captions-features .feature-block { /* Renamed from .demucs-block */
-            margin-bottom: 40px;
         }
 
         #auto-captions-features h2 {
             text-align: center;
             margin-bottom: 40px;
+            color: #fff;
         }
 
         #auto-captions-features h3 {
-            color: #007BFF;
+            color: #1e90ff;
             margin-bottom: 10px;
         }
 
         #auto-captions-features h4 {
             margin-top: 20px;
-            color: #333;
+            color: #ccc;
+        }
+
+        #auto-captions-features p {
+            color: #ddd;
         }
 
         #auto-captions-features ul {
             margin-left: 20px;
-            padding-left: 0;
             list-style-type: disc;
         }
 
         #auto-captions-features li {
             margin-bottom: 10px;
-            font-size: 1rem;
+            color: #ccc;
         }
 
         /* Pricing */
         #pricing {
             padding: 50px 0;
             text-align: center;
+            background-color: #1a1a1a;
+        }
+
+        #pricing h2 {
+            color: #fff;
         }
 
         .pricing-cards {
@@ -149,32 +148,41 @@
         }
 
         .pricing-cards .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: #222;
+            border: 1px solid #333;
             padding: 20px;
             border-radius: 10px;
             width: 300px;
+            color: #e0e0e0;
             text-align: center;
         }
 
         .pricing-cards .card h3 {
+            color: #1e90ff;
             margin-bottom: 15px;
         }
 
         /* Contact Form */
         #contact {
-            background-color: #ffffff;
+            background-color: #181818;
             padding: 50px 0;
             text-align: center;
+        }
+
+        #contact h2 {
+            color: #fff;
+            margin-bottom: 20px;
         }
 
         #contact form input,
         #contact form textarea {
             width: 100%;
             max-width: 500px;
+            background-color: #222;
+            color: #fff;
             padding: 10px;
             margin-bottom: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #444;
             border-radius: 4px;
         }
 
@@ -184,8 +192,8 @@
 
         /* Footer */
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #000;
+            color: #999;
             padding: 20px 0;
             text-align: center;
         }
@@ -197,6 +205,7 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            transition: background 0.3s ease;
         }
 
         .btn-secondary:hover {
@@ -221,20 +230,19 @@
     </header>
 
     <section id="demo">
-    <div class="container">
-        <h2>See Auto Captions for VEGAS Pro in Action</h2>
-        <iframe src="https://www.youtube.com/embed/yzWAXhiRVoM" frameborder="0" allowfullscreen></iframe>
+        <div class="container">
+            <h2>See Auto Captions for VEGAS Pro in Action</h2>
+            <iframe src="https://www.youtube.com/embed/yzWAXhiRVoM" frameborder="0" allowfullscreen></iframe>
 
-        <!-- NOVO VÍDEO ADICIONADO ABAIXO DO VÍDEO EXISTENTE -->
-        <iframe 
-            src="https://www.youtube.com/embed/Cw7WH10F5kU?si=usXpSOybfger4oE4" 
-            frameborder="0" 
-            allowfullscreen 
-            style="margin-top: 30px;">
-        </iframe>
-     </div>
+            <!-- Novo vídeo -->
+            <iframe 
+                src="https://www.youtube.com/embed/Cw7WH10F5kU?si=usXpSOybfger4oE4" 
+                frameborder="0" 
+                allowfullscreen 
+                style="margin-top: 30px;">
+            </iframe>
+        </div>
     </section>
-
 
     <section id="auto-captions-features">
         <div class="container">
@@ -245,45 +253,40 @@
                 <p>Auto Captions is built for speed, offering top-tier transcription quality while guaranteeing your privacy with 100% offline functionality.</p>
                 <h4>Performance Highlights:</h4>
                 <ul>
-                    <li>⚡ **GPU Acceleration**: Supports **NVIDIA CUDA GPUs** for significantly faster processing.</li>
-                    <li>💻 **CPU Support**: Works reliably on systems without a dedicated NVIDIA GPU.</li>
-                    <li>🌐 **100% Offline**: **No internet connection required** after installation. Transcribe sensitive content privately.</li>
-                    <li>🚫 **No Limits**: **No character or time limits** on transcription.</li>
+                    <li>⚡ GPU Acceleration: Supports NVIDIA CUDA GPUs for significantly faster processing.</li>
+                    <li>💻 CPU Support: Works reliably on systems without a dedicated NVIDIA GPU.</li>
+                    <li>🌐 100% Offline: No internet connection required after installation.</li>
+                    <li>🚫 No Limits: No character or time limits on transcription.</li>
                 </ul>
             </div>
-            
+
             <div class="feature-block">
                 <h3>Advanced Subtitle Creation & Translation</h3>
                 <p>Go beyond simple transcription by integrating powerful third-party tools and translating subtitles into other languages easily.</p>
-                <h4>Creative Workflow:</h4>
                 <ul>
-                    <li>🎥 **Subtitle Animation**: Create amazing subtitle animations using **Aegisub Integration**.</li>
-                    <li>📝 **Caption Editing**: Fine-tune your captions with the robust features of **Subtitle Edit Integration**.</li>
-                    <li>🌎 **Translation**: Easily **translate subtitles** into multiple languages.</li>
-                    <li>🎵 **Auto Lyrics**: Transcribe musical tracks with specialized Auto Lyrics mode.</li>
+                    <li>🎥 Subtitle Animation: Create amazing subtitle animations using Aegisub Integration.</li>
+                    <li>📝 Caption Editing: Fine-tune your captions with Subtitle Edit Integration.</li>
+                    <li>🌎 Translation: Easily translate subtitles into multiple languages.</li>
+                    <li>🎵 Auto Lyrics: Transcribe musical tracks with specialized Auto Lyrics mode.</li>
                 </ul>
             </div>
 
             <div class="feature-block">
                 <h3>Flexible Transcription Workflow in VEGAS Pro</h3>
-                <p>Choose exactly which part of your project to transcribe, providing maximum control and efficiency in your editing process.</p>
-                <h4>Timeline Processing Options:</h4>
                 <ul>
-                    <li>✅ **Selected Events**: Process multiple **selected audio/video events** simultaneously.</li>
-                    <li>⏱️ **Timeline Selection**: Transcribe only the specific area defined by the **Timeline Selection** (Loop Region).</li>
-                    <li>🏷️ **Region Markers**: Use defined **Region Markers** for segmented batch processing.</li>
-                    <li>📦 **Batch Transcription**: Process an entire sequence of events or separate files.</li>
+                    <li>✅ Selected Events: Process multiple selected audio/video events simultaneously.</li>
+                    <li>⏱️ Timeline Selection: Transcribe only the area defined by the Timeline Selection (Loop Region).</li>
+                    <li>🏷️ Region Markers: Use defined Region Markers for segmented batch processing.</li>
+                    <li>📦 Batch Transcription: Process an entire sequence of events or separate files.</li>
                 </ul>
             </div>
 
             <div class="feature-block">
                 <h3>Compatibility & License</h3>
-                <p>Ensure compatibility with your version of VEGAS Pro and benefit from a long-term license.</p>
-                <h4>Details:</h4>
                 <ul>
-                    <li>⚙️ **Compatibility**: Works with **VEGAS Pro 14 or higher**.</li>
-                    <li>🔑 **License**: **Lifetime license** with **free updates**.</li>
-                    <li>📖 **Support**: Help tutorial included to get you started quickly.</li>
+                    <li>⚙️ Compatibility: Works with VEGAS Pro 14 or higher.</li>
+                    <li>🔑 License: Lifetime license with free updates.</li>
+                    <li>📖 Support: Help tutorial included to get you started quickly.</li>
                 </ul>
             </div>
         </div>
@@ -307,9 +310,7 @@
             <h2>Contact Us</h2>
             <form action="https://formspree.io/f/xvgagnja" method="POST">
                 <input type="hidden" name="_captcha" value="false">
-                
                 <input type="hidden" name="_subject" value="Auto Captions for VEGAS Pro Purchase/Support">
-                
                 <input type="text" name="name" placeholder="Your name" required><br>
                 <input type="email" name="email" placeholder="Your email" required><br>
                 <textarea name="message" placeholder="Write your message here" rows="5"></textarea><br>
@@ -325,5 +326,3 @@
     </footer>
 </body>
 </html>
-
-
