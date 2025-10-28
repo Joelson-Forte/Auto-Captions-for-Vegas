@@ -132,17 +132,21 @@
         /* Pricing & Contact - Agrupamento e layout lado a lado */
         .flex-group {
             display: flex;
-            flex-wrap: wrap; /* Permite quebrar em telas menores */
-            background-color: #1a1a1a; /* Fundo comum para as duas seções */
-            padding-bottom: 50px; /* Adiciona padding na parte inferior do grupo */
+            flex-wrap: wrap; 
+            background-color: #1a1a1a; 
+            padding-bottom: 50px; 
+            /* ALTERAÇÃO: Espaço reduzido entre as colunas */
+            gap: 20px; 
+            justify-content: center; 
         }
 
         /* Pricing */
         #pricing {
-            padding: 50px 0;
+            /* ALTERAÇÃO: Reduzido o padding vertical */
+            padding: 30px 0; 
             text-align: center;
-            /* background-color: #1a1a1a; Removido para usar o fundo do .flex-group */
-            width: 50%; /* Ocupa metade da largura no modo flex */
+            width: 48%; /* Reduz a largura para acomodar o gap */
+            min-width: 350px;
         }
 
         #pricing h2 {
@@ -173,10 +177,11 @@
 
         /* Contact Form */
         #contact {
-            /* background-color: #181818; Removido para usar o fundo do .flex-group */
-            padding: 50px 0;
+            /* ALTERAÇÃO: Reduzido o padding vertical */
+            padding: 30px 0; 
             text-align: center;
-            width: 50%; /* Ocupa metade da largura no modo flex */
+            width: 48%; /* Reduz a largura para acomodar o gap */
+            min-width: 350px;
         }
 
         #contact h2 {
@@ -204,16 +209,18 @@
         @media (max-width: 992px) {
             .flex-group {
                 flex-direction: column;
+                gap: 0;
             }
 
             #pricing,
             #contact {
                 width: 100%;
-                padding-bottom: 0; /* Remove padding extra quando empilhado */
+                min-width: auto;
+                padding-bottom: 0;
             }
             
             #contact {
-                padding-top: 0; /* Ajuste para não ter padding duplo entre as seções */
+                padding-top: 0;
             }
         }
 
