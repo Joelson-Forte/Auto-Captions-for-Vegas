@@ -22,8 +22,9 @@
             line-height: 1.6;
         }
 
+        /* Container padrão, mantido para as demais seções */
         .container {
-            width: 80%;
+            width: 80%; /* Voltando para 80% como era originalmente */
             margin: 0 auto;
             padding: 20px;
         }
@@ -129,34 +130,48 @@
             color: #ccc;
         }
 
-        /* Pricing & Contact - Agrupamento e layout lado a lado */
+        /* ================================================= */
+        /* CORREÇÃO PARA DEIXAR AS SEÇÕES LADO A LADO E PRÓXIMAS */
+        /* ================================================= */
+
+        /* Container flexível para agrupar as duas seções */
         .flex-group {
             display: flex;
-            flex-wrap: wrap; 
-            background-color: #1a1a1a; 
-            padding-bottom: 50px; 
-            /* ALTERAÇÃO: Espaço reduzido entre as colunas */
-            gap: 20px; 
-            justify-content: center; 
+            justify-content: center; /* Centraliza as duas colunas */
+            background-color: #1a1a1a;
+            padding: 30px 0; /* Padding geral vertical */
         }
 
-        /* Pricing */
-        #pricing {
-            /* ALTERAÇÃO: Reduzido o padding vertical */
-            padding: 30px 0; 
-            text-align: center;
-            width: 48%; /* Reduz a largura para acomodar o gap */
-            min-width: 350px;
+        /* Estilo para ambas as colunas */
+        #pricing,
+        #contact {
+            padding: 0; /* Remove padding de section, pois o container interno foi removido */
+            width: 45%; /* Reduzido de 50% para permitir uma margem central sutil (ou 50% para ficarem coladas) */
+            max-width: 550px; /* Limita o crescimento em telas muito largas */
         }
+        
+        /* Aplica o espaçamento horizontal e largura do container ao conteúdo */
+        #pricing .content-wrapper,
+        #contact .content-wrapper {
+            width: 100%;
+            padding: 0 20px; /* Espaçamento interno horizontal do conteúdo */
+            margin: 0 auto;
+        }
+
+        #pricing {
+            border-right: 1px solid #333; /* Adiciona uma linha divisória para separação visual sutil */
+        }
+
 
         #pricing h2 {
             color: #fff;
+            margin-bottom: 20px;
         }
 
         .pricing-cards {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 0; /* Remove gap */
             flex-wrap: wrap;
         }
 
@@ -165,23 +180,15 @@
             border: 1px solid #333;
             padding: 20px;
             border-radius: 10px;
-            width: 300px;
+            width: 100%; /* Ocupa 100% da largura da coluna */
+            max-width: 300px;
             color: #e0e0e0;
             text-align: center;
         }
 
-        .pricing-cards .card h3 {
-            color: #1e90ff;
-            margin-bottom: 15px;
-        }
-
-        /* Contact Form */
-        #contact {
-            /* ALTERAÇÃO: Reduzido o padding vertical */
-            padding: 30px 0; 
-            text-align: center;
-            width: 48%; /* Reduz a largura para acomodar o gap */
-            min-width: 350px;
+        #pricing .content-wrapper .pricing-cards {
+            /* Força o cartão a ficar à esquerda da coluna "Get it Now" */
+            justify-content: flex-end; 
         }
 
         #contact h2 {
@@ -205,25 +212,37 @@
             margin-top: 10px;
         }
 
-        /* Responsividade para telas menores: Voltar a empilhar as seções */
-        @media (max-width: 992px) {
+        /* Responsividade: Volta a empilhar em telas menores */
+        @media (max-width: 900px) {
             .flex-group {
                 flex-direction: column;
-                gap: 0;
+                padding: 50px 0 0 0; /* Ajusta o padding vertical ao empilhar */
             }
 
             #pricing,
             #contact {
                 width: 100%;
-                min-width: auto;
-                padding-bottom: 0;
+                max-width: none;
+                padding: 0;
+            }
+
+            #pricing {
+                border-right: none;
+                border-bottom: 1px solid #333; /* Adiciona linha na parte inferior */
             }
             
-            #contact {
-                padding-top: 0;
+            #pricing .content-wrapper .pricing-cards {
+                justify-content: center; /* Centraliza o cartão ao empilhar */
+            }
+
+            #pricing .content-wrapper,
+            #contact .content-wrapper {
+                padding: 30px 20px; /* Adiciona padding vertical novamente */
             }
         }
-
+        /* ================================================= */
+        /* FIM DA CORREÇÃO */
+        /* ================================================= */
 
         /* Footer */
         footer {
@@ -328,8 +347,7 @@
 
     <div class="flex-group">
         <section id="pricing">
-            <div class="container">
-                <h2>Get it Now</h2>
+            <div class="content-wrapper"> <h2>Get it Now</h2>
                 <div class="pricing-cards">
                     <div class="card">
                         <h3>Full Version</h3>
@@ -341,8 +359,7 @@
         </section>
 
         <section id="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
+            <div class="content-wrapper"> <h2>Contact Us</h2>
                 <form action="https://formspree.io/f/xvgagnja" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_subject" value="Auto Captions for VEGAS Pro Purchase/Support">
