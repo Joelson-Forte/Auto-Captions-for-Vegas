@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -129,11 +129,20 @@
             color: #ccc;
         }
 
+        /* Pricing & Contact - Agrupamento e layout lado a lado */
+        .flex-group {
+            display: flex;
+            flex-wrap: wrap; /* Permite quebrar em telas menores */
+            background-color: #1a1a1a; /* Fundo comum para as duas seções */
+            padding-bottom: 50px; /* Adiciona padding na parte inferior do grupo */
+        }
+
         /* Pricing */
         #pricing {
             padding: 50px 0;
             text-align: center;
-            background-color: #1a1a1a;
+            /* background-color: #1a1a1a; Removido para usar o fundo do .flex-group */
+            width: 50%; /* Ocupa metade da largura no modo flex */
         }
 
         #pricing h2 {
@@ -164,9 +173,10 @@
 
         /* Contact Form */
         #contact {
-            background-color: #181818;
+            /* background-color: #181818; Removido para usar o fundo do .flex-group */
             padding: 50px 0;
             text-align: center;
+            width: 50%; /* Ocupa metade da largura no modo flex */
         }
 
         #contact h2 {
@@ -189,6 +199,24 @@
         #contact form button {
             margin-top: 10px;
         }
+
+        /* Responsividade para telas menores: Voltar a empilhar as seções */
+        @media (max-width: 992px) {
+            .flex-group {
+                flex-direction: column;
+            }
+
+            #pricing,
+            #contact {
+                width: 100%;
+                padding-bottom: 0; /* Remove padding extra quando empilhado */
+            }
+            
+            #contact {
+                padding-top: 0; /* Ajuste para não ter padding duplo entre as seções */
+            }
+        }
+
 
         /* Footer */
         footer {
@@ -234,7 +262,6 @@
             <h2>See Auto Captions for VEGAS Pro in Action</h2>
             <iframe src="https://www.youtube.com/embed/yzWAXhiRVoM" frameborder="0" allowfullscreen></iframe>
 
-            <!-- Novo vídeo -->
             <iframe 
                 src="https://www.youtube.com/embed/Cw7WH10F5kU?si=usXpSOybfger4oE4" 
                 frameborder="0" 
@@ -292,33 +319,34 @@
         </div>
     </section>
 
-    <section id="pricing">
-        <div class="container">
-            <h2>Get it Now</h2>
-            <div class="pricing-cards">
-                <div class="card">
-                    <h3>Full Version</h3>
-                    <p><strong>US$ 79</strong> - Lifetime license</p>
-                    <p>Please send a message to confirm your order. A PayPal invoice will be emailed to you, and your serial number will be sent after payment is confirmed.</p>
+    <div class="flex-group">
+        <section id="pricing">
+            <div class="container">
+                <h2>Get it Now</h2>
+                <div class="pricing-cards">
+                    <div class="card">
+                        <h3>Full Version</h3>
+                        <p><strong>US$ 79</strong> - Lifetime license</p>
+                        <p>Please send a message to confirm your order. A PayPal invoice will be emailed to you, and your serial number will be sent after payment is confirmed.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form action="https://formspree.io/f/xvgagnja" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="Auto Captions for VEGAS Pro Purchase/Support">
-                <input type="text" name="name" placeholder="Your name" required><br>
-                <input type="email" name="email" placeholder="Your email" required><br>
-                <textarea name="message" placeholder="Write your message here" rows="5"></textarea><br>
-                <button type="submit" class="btn-primary">Send Message</button>
-            </form>
-        </div>
-    </section>
-
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form action="https://formspree.io/f/xvgagnja" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Auto Captions for VEGAS Pro Purchase/Support">
+                    <input type="text" name="name" placeholder="Your name" required><br>
+                    <input type="email" name="email" placeholder="Your email" required><br>
+                    <textarea name="message" placeholder="Write your message here" rows="5"></textarea><br>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
     <footer>
         <div class="container">
             <p>Contact and Support: joelsonforte.br@gmail.com</p>
