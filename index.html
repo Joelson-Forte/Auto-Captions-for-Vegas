@@ -1,380 +1,328 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Auto Captions for VEGAS Pro - Audio Transcription and Subtitle Creation" />
-    <title>Auto Captions for VEGAS Pro</title>
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-        /* Reset and base layout */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Auto Captions for VEGAS Pro - Audio Transcription and Subtitle Creation" />
+    <title>Auto Captions for VEGAS Pro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Reset and base layout */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* Fundo e texto principal */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212; /* Fundo escuro */
-            color: #e0e0e0; /* Texto claro */
-            line-height: 1.6;
-        }
+        /* Fundo e texto principal */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Fundo escuro */
+            color: #e0e0e0; /* Texto claro */
+            line-height: 1.6;
+        }
 
-        /* Container padrão, mantido para as demais seções */
-        .container {
-            width: 80%; /* Voltando para 80% como era originalmente */
-            margin: 0 auto;
-            padding: 20px;
-        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-        /* Hero Section */
-        #hero {
-            background-color: #000; /* Preto */
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
+        /* Hero Section */
+        #hero {
+            background-color: #000; /* Preto */
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
 
-        #hero h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+        #hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
 
-        #hero p {
-            font-size: 1.2rem;
-            color: #ccc;
-        }
+        #hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
 
-        .btn-primary {
-            background-color: #1e90ff; /* Azul vivo */
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-            transition: background 0.3s ease;
-        }
+        .btn-primary {
+            background-color: #1e90ff; /* Azul vivo */
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
 
-        .btn-primary:hover {
-            background-color: #0b60d1;
-            color: #fff;
-        }
+        .btn-primary:hover {
+            background-color: #0b60d1;
+            color: #fff;
+        }
 
-        /* Demo */
-        #demo {
-            text-align: center;
-            margin-top: 40px;
-            padding: 50px 0;
-            background-color: #1e1e1e; /* Seção levemente destacada */
-        }
+        /* Demo */
+        #demo {
+            text-align: center;
+            margin-top: 40px;
+            padding: 50px 0;
+            background-color: #1e1e1e; /* Seção levemente destacada */
+        }
 
-        #demo h2 {
-            color: #fff;
-            margin-bottom: 30px;
-        }
+        #demo h2 {
+            color: #fff;
+            margin-bottom: 30px;
+        }
 
-        #demo iframe {
-            width: 100%;
-            max-width: 800px;
-            height: 450px;
-            margin: 0 auto;
-            display: block;
-            border-radius: 8px;
-            border: 2px solid #333;
-        }
+        #demo iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 8px;
+            border: 2px solid #333;
+        }
 
-        @media (max-width: 768px) {
-            #demo iframe {
-                height: 300px;
-            }
-        }
+        @media (max-width: 768px) {
+            #demo iframe {
+                height: 300px;
+            }
+        }
 
-        /* Features */
-        #auto-captions-features {
-            background-color: #181818;
-            padding: 50px 0;
-            text-align: left;
-        }
+        /* Features */
+        #auto-captions-features {
+            background-color: #181818;
+            padding: 50px 0;
+            text-align: left;
+        }
 
-        #auto-captions-features h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #fff;
-        }
+        #auto-captions-features h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+        }
 
-        #auto-captions-features h3 {
-            color: #1e90ff;
-            margin-bottom: 10px;
-        }
+        #auto-captions-features h3 {
+            color: #1e90ff;
+            margin-bottom: 10px;
+        }
 
-        #auto-captions-features h4 {
-            margin-top: 20px;
-            color: #ccc;
-        }
+        #auto-captions-features h4 {
+            margin-top: 20px;
+            color: #ccc;
+        }
 
-        #auto-captions-features p {
-            color: #ddd;
-        }
+        #auto-captions-features p {
+            color: #ddd;
+        }
 
-        #auto-captions-features ul {
-            margin-left: 20px;
-            list-style-type: disc;
-        }
+        #auto-captions-features ul {
+            margin-left: 20px;
+            list-style-type: disc;
+        }
 
-        #auto-captions-features li {
-            margin-bottom: 10px;
-            color: #ccc;
-        }
+        #auto-captions-features li {
+            margin-bottom: 10px;
+            color: #ccc;
+        }
 
-        /* ================================================= */
-        /* CORREÇÃO PARA DEIXAR AS SEÇÕES LADO A LADO E PRÓXIMAS */
-        /* ================================================= */
+        /* Pricing */
+        #pricing {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #1a1a1a;
+        }
 
-        /* Container flexível para agrupar as duas seções */
-        .flex-group {
-            display: flex;
-            justify-content: center; /* Centraliza as duas colunas */
-            background-color: #1a1a1a;
-            padding: 30px 0; /* Padding geral vertical */
-        }
+        #pricing h2 {
+            color: #fff;
+        }
 
-        /* Estilo para ambas as colunas */
-        #pricing,
-        #contact {
-            padding: 0; /* Remove padding de section, pois o container interno foi removido */
-            width: 45%; /* Reduzido de 50% para permitir uma margem central sutil (ou 50% para ficarem coladas) */
-            max-width: 550px; /* Limita o crescimento em telas muito largas */
-        }
-        
-        /* Aplica o espaçamento horizontal e largura do container ao conteúdo */
-        #pricing .content-wrapper,
-        #contact .content-wrapper {
-            width: 100%;
-            padding: 0 20px; /* Espaçamento interno horizontal do conteúdo */
-            margin: 0 auto;
-        }
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
 
-        #pricing {
-            border-right: 1px solid #333; /* Adiciona uma linha divisória para separação visual sutil */
-        }
+        .pricing-cards .card {
+            background-color: #222;
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            color: #e0e0e0;
+            text-align: center;
+        }
 
+        .pricing-cards .card h3 {
+            color: #1e90ff;
+            margin-bottom: 15px;
+        }
 
-        #pricing h2 {
-            color: #fff;
-            margin-bottom: 20px;
-        }
+        /* Contact Form */
+        #contact {
+            background-color: #181818;
+            padding: 50px 0;
+            text-align: center;
+        }
 
-        .pricing-cards {
-            display: flex;
-            justify-content: center;
-            gap: 0; /* Remove gap */
-            flex-wrap: wrap;
-        }
+        #contact h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
 
-        .pricing-cards .card {
-            background-color: #222;
-            border: 1px solid #333;
-            padding: 20px;
-            border-radius: 10px;
-            width: 100%; /* Ocupa 100% da largura da coluna */
-            max-width: 300px;
-            color: #e0e0e0;
-            text-align: center;
-        }
+        #contact form input,
+        #contact form textarea {
+            width: 100%;
+            max-width: 500px;
+            background-color: #222;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #444;
+            border-radius: 4px;
+        }
 
-        #pricing .content-wrapper .pricing-cards {
-            /* Força o cartão a ficar à esquerda da coluna "Get it Now" */
-            justify-content: flex-end; 
-        }
+        #contact form button {
+            margin-top: 10px;
+        }
 
-        #contact h2 {
-            color: #fff;
-            margin-bottom: 20px;
-        }
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #999;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-        #contact form input,
-        #contact form textarea {
-            width: 100%;
-            max-width: 500px;
-            background-color: #222;
-            color: #fff;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #444;
-            border-radius: 4px;
-        }
+        .btn-secondary {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
 
-        #contact form button {
-            margin-top: 10px;
-        }
-
-        /* Responsividade: Volta a empilhar em telas menores */
-        @media (max-width: 900px) {
-            .flex-group {
-                flex-direction: column;
-                padding: 50px 0 0 0; /* Ajusta o padding vertical ao empilhar */
-            }
-
-            #pricing,
-            #contact {
-                width: 100%;
-                max-width: none;
-                padding: 0;
-            }
-
-            #pricing {
-                border-right: none;
-                border-bottom: 1px solid #333; /* Adiciona linha na parte inferior */
-            }
-            
-            #pricing .content-wrapper .pricing-cards {
-                justify-content: center; /* Centraliza o cartão ao empilhar */
-            }
-
-            #pricing .content-wrapper,
-            #contact .content-wrapper {
-                padding: 30px 20px; /* Adiciona padding vertical novamente */
-            }
-        }
-        /* ================================================= */
-        /* FIM DA CORREÇÃO */
-        /* ================================================= */
-
-        /* Footer */
-        footer {
-            background-color: #000;
-            color: #999;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .btn-secondary {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background-color: #218838;
-        }
-    </style>
+        .btn-secondary:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    <header id="hero">
-        <div class="container">
-            <h1>Auto Captions for VEGAS Pro</h1>
-            <p>Professional Audio Transcription and Subtitle Creation</p>
-            <a 
-                class="btn-primary" 
-                href="https://huggingface.co/datasets/Joelson-Forte/Auto-Captions-for-Vegas/resolve/main/Auto_Captions_v2.0.7_for_VEGAS_Pro.zip?download=true"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Download (v2.0.7)
-            </a>
-        </div>
-    </header>
+    <header id="hero">
+        <div class="container">
+            <h1>Auto Captions for VEGAS Pro</h1>
+            <p>Professional Audio Transcription and Subtitle Creation</p>
+            <a 
+                class="btn-primary" 
+                href="https://huggingface.co/datasets/Joelson-Forte/Auto-Captions-for-Vegas/resolve/main/Auto_Captions_v2.0.7_for_VEGAS_Pro.zip?download=true"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Download (v2.0.7)
+            </a>
+        </div>
+    </header>
 
-    <section id="demo">
-        <div class="container">
-            <h2>See Auto Captions for VEGAS Pro in Action</h2>
-            <iframe src="https://www.youtube.com/embed/yzWAXhiRVoM" frameborder="0" allowfullscreen></iframe>
+    <section id="demo">
+        <div class="container">
+            <h2>See Auto Captions for VEGAS Pro in Action</h2>
+            <iframe src="https://www.youtube.com/embed/yzWAXhiRVoM" frameborder="0" allowfullscreen></iframe>
 
-            <iframe 
-                src="https://www.youtube.com/embed/Cw7WH10F5kU?si=usXpSOybfger4oE4" 
-                frameborder="0" 
-                allowfullscreen 
-                style="margin-top: 30px;">
-            </iframe>
-        </div>
-    </section>
+            <!-- Novo vídeo -->
+            <iframe 
+                src="https://www.youtube.com/embed/Cw7WH10F5kU?si=usXpSOybfger4oE4" 
+                frameborder="0" 
+                allowfullscreen 
+                style="margin-top: 30px;">
+            </iframe>
+        </div>
+    </section>
 
-    <section id="auto-captions-features">
-        <div class="container">
-            <h2>✨ Key Features of Auto Captions for VEGAS Pro</h2>
+    <section id="auto-captions-features">
+        <div class="container">
+            <h2>✨ Key Features of Auto Captions for VEGAS Pro</h2>
 
-            <div class="feature-block">
-                <h3>High-Performance & Offline Capability</h3>
-                <p>Auto Captions is built for speed, offering top-tier transcription quality while guaranteeing your privacy with 100% offline functionality.</p>
-                <h4>Performance Highlights:</h4>
-                <ul>
-                    <li>⚡ GPU Acceleration: Supports NVIDIA CUDA GPUs for significantly faster processing.</li>
-                    <li>💻 CPU Support: Works reliably on systems without a dedicated NVIDIA GPU.</li>
-                    <li>🌐 100% Offline: No internet connection required after installation.</li>
-                    <li>🚫 No Limits: No character or time limits on transcription.</li>
-                </ul>
-            </div>
+            <div class="feature-block">
+                <h3>High-Performance & Offline Capability</h3>
+                <p>Auto Captions is built for speed, offering top-tier transcription quality while guaranteeing your privacy with 100% offline functionality.</p>
+                <h4>Performance Highlights:</h4>
+                <ul>
+                    <li>⚡ GPU Acceleration: Supports NVIDIA CUDA GPUs for significantly faster processing.</li>
+                    <li>💻 CPU Support: Works reliably on systems without a dedicated NVIDIA GPU.</li>
+                    <li>🌐 100% Offline: No internet connection required after installation.</li>
+                    <li>🚫 No Limits: No character or time limits on transcription.</li>
+                </ul>
+            </div>
 
-            <div class="feature-block">
-                <h3>Advanced Subtitle Creation & Translation</h3>
-                <p>Go beyond simple transcription by integrating powerful third-party tools and translating subtitles into other languages easily.</p>
-                <ul>
-                    <li>🎥 Subtitle Animation: Create amazing subtitle animations using Aegisub Integration.</li>
-                    <li>📝 Caption Editing: Fine-tune your captions with Subtitle Edit Integration.</li>
-                    <li>🌎 Translation: Easily translate subtitles into multiple languages.</li>
-                    <li>🎵 Auto Lyrics: Transcribe musical tracks with specialized Auto Lyrics mode.</li>
-                </ul>
-            </div>
+            <div class="feature-block">
+                <h3>Advanced Subtitle Creation & Translation</h3>
+                <p>Go beyond simple transcription by integrating powerful third-party tools and translating subtitles into other languages easily.</p>
+                <ul>
+                    <li>🎥 Subtitle Animation: Create amazing subtitle animations using Aegisub Integration.</li>
+                    <li>📝 Caption Editing: Fine-tune your captions with Subtitle Edit Integration.</li>
+                    <li>🌎 Translation: Easily translate subtitles into multiple languages.</li>
+                    <li>🎵 Auto Lyrics: Transcribe musical tracks with specialized Auto Lyrics mode.</li>
+                </ul>
+            </div>
 
-            <div class="feature-block">
-                <h3>Flexible Transcription Workflow in VEGAS Pro</h3>
-                <ul>
-                    <li>✅ Selected Events: Process multiple selected audio/video events simultaneously.</li>
-                    <li>⏱️ Timeline Selection: Transcribe only the area defined by the Timeline Selection (Loop Region).</li>
-                    <li>🏷️ Region Markers: Use defined Region Markers for segmented batch processing.</li>
-                    <li>📦 Batch Transcription: Process an entire sequence of events or separate files.</li>
-                </ul>
-            </div>
+            <div class="feature-block">
+                <h3>Flexible Transcription Workflow in VEGAS Pro</h3>
+                <ul>
+                    <li>✅ Selected Events: Process multiple selected audio/video events simultaneously.</li>
+                    <li>⏱️ Timeline Selection: Transcribe only the area defined by the Timeline Selection (Loop Region).</li>
+                    <li>🏷️ Region Markers: Use defined Region Markers for segmented batch processing.</li>
+                    <li>📦 Batch Transcription: Process an entire sequence of events or separate files.</li>
+                </ul>
+            </div>
 
-            <div class="feature-block">
-                <h3>Compatibility & License</h3>
-                <ul>
-                    <li>⚙️ Compatibility: Works with VEGAS Pro 14 or higher.</li>
-                    <li>🔑 License: Lifetime license with free updates.</li>
-                    <li>📖 Support: Help tutorial included to get you started quickly.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+            <div class="feature-block">
+                <h3>Compatibility & License</h3>
+                <ul>
+                    <li>⚙️ Compatibility: Works with VEGAS Pro 14 or higher.</li>
+                    <li>🔑 License: Lifetime license with free updates.</li>
+                    <li>📖 Support: Help tutorial included to get you started quickly.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-    <div class="flex-group">
-        <section id="pricing">
-            <div class="content-wrapper"> <h2>Get it Now</h2>
-                <div class="pricing-cards">
-                    <div class="card">
-                        <h3>Full Version</h3>
-                        <p><strong>US$ 79</strong> - Lifetime license</p>
-                        <p>Please send a message to confirm your order. A PayPal invoice will be emailed to you, and your serial number will be sent after payment is confirmed.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="pricing">
+        <div class="container">
+            <h2>Get it Now</h2>
+            <div class="pricing-cards">
+                <div class="card">
+                    <h3>Full Version</h3>
+                    <p><strong>US$ 79</strong> - Lifetime license</p>
+                    <p>Please send a message to confirm your order. A PayPal invoice will be emailed to you, and your serial number will be sent after payment is confirmed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact">
-            <div class="content-wrapper"> <h2>Contact Us</h2>
-                <form action="https://formspree.io/f/xvgagnja" method="POST">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="Auto Captions for VEGAS Pro Purchase/Support">
-                    <input type="text" name="name" placeholder="Your name" required><br>
-                    <input type="email" name="email" placeholder="Your email" required><br>
-                    <textarea name="message" placeholder="Write your message here" rows="5"></textarea><br>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </div>
-    <footer>
-        <div class="container">
-            <p>Contact and Support: joelsonforte.br@gmail.com</p>
-        </div>
-    </footer>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/xvgagnja" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Auto Captions for VEGAS Pro Purchase/Support">
+                <input type="text" name="name" placeholder="Your name" required><br>
+                <input type="email" name="email" placeholder="Your email" required><br>
+                <textarea name="message" placeholder="Write your message here" rows="5"></textarea><br>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Contact and Support: joelsonforte.br@gmail.com</p>
+        </div>
+    </footer>
 </body>
 </html>
