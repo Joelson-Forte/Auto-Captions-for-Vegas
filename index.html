@@ -7,17 +7,16 @@
     <title>Auto Captions for VEGAS Pro</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-        /* Reset and base layout */
+        /* Reset e base */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        /* Fundo e texto principal */
         body {
             font-family: Arial, sans-serif;
-            background-color: #121212; /* Fundo escuro */
-            color: #e0e0e0; /* Texto claro */
+            background-color: #121212;
+            color: #e0e0e0;
             line-height: 1.6;
         }
         .container {
@@ -25,9 +24,10 @@
             margin: 0 auto;
             padding: 20px;
         }
-        /* Hero Section */
+
+        /* Hero */
         #hero {
-            background-color: #000; /* Preto */
+            background-color: #000;
             color: #fff;
             padding: 40px 0;
             text-align: center;
@@ -41,7 +41,7 @@
             color: #ccc;
         }
         .btn-primary {
-            background-color: #1e90ff; /* Azul vivo */
+            background-color: #1e90ff;
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
@@ -53,14 +53,14 @@
         }
         .btn-primary:hover {
             background-color: #0b60d1;
-            color: #fff;
         }
+
         /* Demo */
         #demo {
             text-align: center;
             margin-top: 40px;
             padding: 50px 0;
-            background-color: #1e1e1e; /* Seção levemente destacada */
+            background-color: #1e1e1e;
         }
         #demo h2 {
             color: #fff;
@@ -80,11 +80,11 @@
                 height: 300px;
             }
         }
+
         /* Features */
         #auto-captions-features {
             background-color: #181818;
             padding: 50px 0;
-            text-align: left;
         }
         #auto-captions-features h2 {
             text-align: center;
@@ -99,9 +99,6 @@
             margin-top: 20px;
             color: #ccc;
         }
-        #auto-captions-features p {
-            color: #ddd;
-        }
         #auto-captions-features ul {
             margin-left: 20px;
             list-style-type: disc;
@@ -111,7 +108,7 @@
             color: #ccc;
         }
 
-        /* ======= NOVO BLOCO: Get it Now + Contact Us lado a lado ======= */
+        /* Seção Get it Now + Contact Us */
         #purchase-contact {
             background-color: #1a1a1a;
             padding: 60px 0;
@@ -135,6 +132,13 @@
             color: #fff;
             margin-bottom: 20px;
         }
+
+        /* Centralização do card */
+        .pricing-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* ✅ Centraliza o conteúdo */
+        }
         .pricing-box .card {
             background-color: #222;
             border: 1px solid #333;
@@ -142,11 +146,14 @@
             border-radius: 10px;
             color: #e0e0e0;
             text-align: center;
+            width: 85%; /* Mantém visual proporcional */
         }
         .pricing-box .card h3 {
             color: #1e90ff;
             margin-bottom: 15px;
         }
+
+        /* Formulário */
         .contact-box form input,
         .contact-box form textarea {
             width: 100%;
@@ -161,7 +168,6 @@
             display: block;
             margin: 10px auto 0 auto; /* ✅ Centraliza o botão */
         }
-        /* =============================================================== */
 
         /* Footer */
         footer {
@@ -219,45 +225,16 @@
             <div class="feature-block">
                 <h3>High-Performance & Offline Capability</h3>
                 <p>Auto Captions is built for speed, offering top-tier transcription quality while guaranteeing your privacy with 100% offline functionality.</p>
-                <h4>Performance Highlights:</h4>
                 <ul>
-                    <li>⚡ GPU Acceleration: Supports NVIDIA CUDA GPUs for significantly faster processing.</li>
-                    <li>💻 CPU Support: Works reliably on systems without a dedicated NVIDIA GPU.</li>
-                    <li>🌐 100% Offline: No internet connection required after installation.</li>
-                    <li>🚫 No Limits: No character or time limits on transcription.</li>
-                </ul>
-            </div>
-            <div class="feature-block">
-                <h3>Advanced Subtitle Creation & Translation</h3>
-                <p>Go beyond simple transcription by integrating powerful third-party tools and translating subtitles into other languages easily.</p>
-                <ul>
-                    <li>🎥 Subtitle Animation: Create amazing subtitle animations using Aegisub Integration.</li>
-                    <li>📝 Caption Editing: Fine-tune your captions with Subtitle Edit Integration.</li>
-                    <li>🌎 Translation: Easily translate subtitles into multiple languages.</li>
-                    <li>🎵 Auto Lyrics: Transcribe musical tracks with specialized Auto Lyrics mode.</li>
-                </ul>
-            </div>
-            <div class="feature-block">
-                <h3>Flexible Transcription Workflow in VEGAS Pro</h3>
-                <ul>
-                    <li>✅ Selected Events: Process multiple selected audio/video events simultaneously.</li>
-                    <li>⏱️ Timeline Selection: Transcribe only the area defined by the Timeline Selection (Loop Region).</li>
-                    <li>🏷️ Region Markers: Use defined Region Markers for segmented batch processing.</li>
-                    <li>📦 Batch Transcription: Process an entire sequence of events or separate files.</li>
-                </ul>
-            </div>
-            <div class="feature-block">
-                <h3>Compatibility & License</h3>
-                <ul>
-                    <li>⚙️ Compatibility: Works with VEGAS Pro 14 or higher.</li>
-                    <li>🔑 License: Lifetime license with free updates.</li>
-                    <li>📖 Support: Help tutorial included to get you started quickly.</li>
+                    <li>⚡ GPU Acceleration</li>
+                    <li>💻 CPU Support</li>
+                    <li>🌐 100% Offline</li>
+                    <li>🚫 No Limits</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- NOVA SEÇÃO COM LAYOUT LADO A LADO -->
     <section id="purchase-contact">
         <div class="container side-by-side">
             <!-- Get it Now -->
