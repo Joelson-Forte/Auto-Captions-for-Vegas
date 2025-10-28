@@ -79,6 +79,7 @@
             #demo iframe {
                 height: 300px;
             }
+            .container { width: 94%; }
         }
 
         /* Features */
@@ -98,6 +99,9 @@
         #auto-captions-features h4 {
             margin-top: 20px;
             color: #ccc;
+        }
+        #auto-captions-features p {
+            color: #ddd;
         }
         #auto-captions-features ul {
             margin-left: 20px;
@@ -133,11 +137,11 @@
             margin-bottom: 20px;
         }
 
-        /* Centralização do card */
+        /* Centralização do card dentro da pricing-box */
         .pricing-box {
             display: flex;
             flex-direction: column;
-            align-items: center; /* ✅ Centraliza o conteúdo */
+            align-items: center;
         }
         .pricing-box .card {
             background-color: #222;
@@ -146,14 +150,19 @@
             border-radius: 10px;
             color: #e0e0e0;
             text-align: center;
-            width: 85%; /* Mantém visual proporcional */
+            width: 85%; /* Centralizado e proporcional */
         }
         .pricing-box .card h3 {
             color: #1e90ff;
             margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        .pricing-box .card p {
+            margin-bottom: 12px;
+            color: #ddd;
         }
 
-        /* Formulário */
+        /* Formulário de contato */
         .contact-box form input,
         .contact-box form textarea {
             width: 100%;
@@ -166,7 +175,7 @@
         }
         .contact-box form button {
             display: block;
-            margin: 10px auto 0 auto; /* ✅ Centraliza o botão */
+            margin: 10px auto 0 auto; /* Centraliza o botão */
         }
 
         /* Footer */
@@ -225,11 +234,39 @@
             <div class="feature-block">
                 <h3>High-Performance & Offline Capability</h3>
                 <p>Auto Captions is built for speed, offering top-tier transcription quality while guaranteeing your privacy with 100% offline functionality.</p>
+                <h4>Performance Highlights:</h4>
                 <ul>
-                    <li>⚡ GPU Acceleration</li>
-                    <li>💻 CPU Support</li>
-                    <li>🌐 100% Offline</li>
-                    <li>🚫 No Limits</li>
+                    <li>⚡ GPU Acceleration: Supports NVIDIA CUDA GPUs for significantly faster processing.</li>
+                    <li>💻 CPU Support: Works reliably on systems without a dedicated NVIDIA GPU.</li>
+                    <li>🌐 100% Offline: No internet connection required after installation.</li>
+                    <li>🚫 No Limits: No character or time limits on transcription.</li>
+                </ul>
+            </div>
+            <div class="feature-block">
+                <h3>Advanced Subtitle Creation & Translation</h3>
+                <p>Go beyond simple transcription by integrating powerful third-party tools and translating subtitles into other languages easily.</p>
+                <ul>
+                    <li>🎥 Subtitle Animation: Create amazing subtitle animations using Aegisub Integration.</li>
+                    <li>📝 Caption Editing: Fine-tune your captions with Subtitle Edit Integration.</li>
+                    <li>🌎 Translation: Easily translate subtitles into multiple languages.</li>
+                    <li>🎵 Auto Lyrics: Transcribe musical tracks with specialized Auto Lyrics mode.</li>
+                </ul>
+            </div>
+            <div class="feature-block">
+                <h3>Flexible Transcription Workflow in VEGAS Pro</h3>
+                <ul>
+                    <li>✅ Selected Events: Process multiple selected audio/video events simultaneously.</li>
+                    <li>⏱️ Timeline Selection: Transcribe only the area defined by the Timeline Selection (Loop Region).</li>
+                    <li>🏷️ Region Markers: Use defined Region Markers for segmented batch processing.</li>
+                    <li>📦 Batch Transcription: Process an entire sequence of events or separate files.</li>
+                </ul>
+            </div>
+            <div class="feature-block">
+                <h3>Compatibility & License</h3>
+                <ul>
+                    <li>⚙️ Compatibility: Works with VEGAS Pro 14 or higher.</li>
+                    <li>🔑 License: Lifetime license with free updates.</li>
+                    <li>📖 Support: Help tutorial included to get you started quickly.</li>
                 </ul>
             </div>
         </div>
