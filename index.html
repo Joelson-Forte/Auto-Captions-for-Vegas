@@ -48,27 +48,10 @@
       display: inline-block;
       margin: 8px;
       transition: background 0.3s ease;
-      min-width: 220px;     /* 🔧 força mesmo tamanho */
-      text-align: center;   /* 🔧 centraliza texto */
+      min-width: 220px;
+      text-align: center;
     }
     .btn-primary:hover { background-color: #0b60d1; }
-
-    /* === Floating Button === */
-    #floating-buy {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      z-index: 999;
-      background-color: #1e90ff;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
-      transition: background 0.3s ease;
-    }
-    #floating-buy:hover { background-color: #0b60d1; }
 
     /* === Demo === */
     #demo {
@@ -103,17 +86,8 @@
       margin-bottom: 40px;
       color: #fff;
     }
-    #auto-captions-features h3 {
-      color: #1e90ff;
-      margin-bottom: 10px;
-    }
-    #auto-captions-features h4 { margin-top: 20px; color: #ccc; }
+    #auto-captions-features h3 { color: #1e90ff; margin-bottom: 10px; }
     #auto-captions-features p, #auto-captions-features li { color: #ddd; }
-    #auto-captions-features ul {
-      margin-left: 20px;
-      list-style-type: disc;
-    }
-    #auto-captions-features li { margin-bottom: 10px; }
 
     /* === Purchase + Contact === */
     #purchase-contact {
@@ -138,57 +112,27 @@
     .side-by-side {
       display: flex;
       justify-content: center;
-      align-items: stretch;
-      gap: 50px;
+      align-items: center;
       flex-wrap: wrap;
     }
 
-    .pricing-box, .contact-box {
+    .contact-box {
       background-color: #1a1a1a;
       border: 1px solid #2b2b2b;
       border-radius: 10px;
       padding: 25px;
       width: 380px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      text-align: center;
     }
 
-    .pricing-box h2, .contact-box h2 {
-      text-align: center;
+    .contact-box h2 {
       color: #fff;
       margin-bottom: 20px;
     }
 
-    .pricing-box {
-      align-items: center;
-      text-align: center;
-    }
-
-    .pricing-box .card {
-      background-color: #202020;
-      border: 1px solid #333;
-      border-radius: 10px;
-      padding: 25px;
-      width: 100%;
-      max-width: 300px;
-      color: #e6e6e6;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-    }
-
-    .pricing-box .card h3 { color: #1e90ff; margin-bottom: 15px; }
-    .pricing-box .card p { color: #d6d6d6; margin-bottom: 12px; }
-
     .contact-box form {
-      flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
     .contact-box form input,
     .contact-box form textarea {
@@ -199,39 +143,20 @@
       margin-bottom: 10px;
       border: 1px solid #333;
       border-radius: 4px;
-      outline: none;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
-    .contact-box form input:focus,
-    .contact-box form textarea:focus {
-      border-color: #1e90ff;
-      box-shadow: 0 0 0 3px rgba(30,144,255,0.08);
-    }
-    .contact-box form textarea { height: 220px; }
     .contact-box form button {
-      display: block;
-      margin: 20px auto 0 auto;
       background-color: #1e90ff;
       color: #fff;
       padding: 10px 18px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      transition: background 0.25s ease;
-    }
-    .contact-box form button:hover { background-color: #0b60d1; }
-
-    /* === Footer === */
-    footer {
-      background-color: #000;
-      color: #9a9a9a;
-      padding: 20px 0;
-      text-align: center;
-      font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
+
   <!-- === HERO === -->
   <header id="hero">
     <div class="container">
@@ -239,12 +164,10 @@
       <h1>Auto Captions for VEGAS Pro</h1>
       <p>Professional Audio Transcription and Subtitle Creation</p>
       <div class="btn-group">
-        <a class="btn-primary" href="https://huggingface.co/datasets/Joelson-Forte/Auto-Captions-for-Vegas/resolve/main/Auto_Captions_v2.0.7_for_VEGAS_Pro.zip?download=true" target="_blank" rel="noopener noreferrer">
+        <a class="btn-primary" href="https://huggingface.co/datasets/Joelson-Forte/Auto-Captions-for-Vegas/resolve/main/Auto_Captions_v2.0.7_for_VEGAS_Pro.zip?download=true" target="_blank">
           Download v2.0.7
         </a>
-        <a class="btn-primary" href="#purchase-contact">
-          Buy Full Version
-        </a>
+        <a class="btn-primary" href="#purchase-contact">Buy Full Version</a>
       </div>
       <p style="margin-top:12px; color:#ffffff; font-weight:bold;">15 Days Free Trial Evaluation</p>
     </div>
@@ -255,9 +178,10 @@
     <div class="container">
       <h2>🎬 See Auto Captions for VEGAS Pro in Action</h2>
       <h3>Demo 1 – Audio Transcription</h3>
-      <iframe src="https://www.youtube.com/embed/yzWAXhiRVoM" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/yzWAXhiRVoM" allowfullscreen></iframe>
+
       <h3>Demo 2 – Animated Captions</h3>
-      <iframe src="https://www.youtube.com/embed/Cw7WH10F5kU?si=usXpSOybfger4oE4" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/Cw7WH10F5kU?si=usXpSOybfger4oE4" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -268,45 +192,45 @@
 
       <div class="feature-block">
         <h3>High-Performance & Offline Capability</h3>
-        <p>Auto Captions delivers top-tier transcription quality while maintaining complete privacy with 100% offline processing.</p>
         <ul>
           <li>⚡ GPU Acceleration (NVIDIA CUDA)</li>
-          <li>💻 CPU Support (no GPU required)</li>
-          <li>🌐 100% Offline — no internet needed</li>
-          <li>🚫 No character or time limits</li>
+          <li>💻 CPU Support</li>
+          <li>🌐 Fully Offline</li>
+          <li>🚫 No Limits</li>
         </ul>
       </div>
 
       <div class="feature-block">
         <h3>Advanced Subtitle Creation & Translation</h3>
         <ul>
-          <li>🎥 Subtitle Animation via Aegisub Integration</li>
-          <li>📝 Caption Editing with Subtitle Edit</li>
-          <li>🌎 Easy multilingual translation</li>
-          <li>🎵 Auto Lyrics for songs and music</li>
+          <li>🎥 Aegisub Integration</li>
+          <li>📝 Subtitle Edit</li>
+          <li>🌎 Multilingual</li>
+          <li>🎵 Auto Lyrics</li>
         </ul>
       </div>
 
       <div class="feature-block">
-        <h3>Flexible Transcription Workflow in VEGAS Pro</h3>
+        <h3>Workflow in VEGAS Pro</h3>
         <ul>
-          <li>✅ Selected Events — process multiple clips</li>
-          <li>⏱️ Timeline Selection (Loop Region)</li>
-          <li>🏷️ Region Markers for segmented processing</li>
-          <li>📦 Batch Transcription — handle entire sequences</li>
+          <li>Multiple Clips</li>
+          <li>Loop Region</li>
+          <li>Region Markers</li>
+          <li>Batch Mode</li>
         </ul>
       </div>
 
       <div class="feature-block">
         <h3>Compatibility & License</h3>
         <ul>
-          <li>⚙️ Compatible with MAGIX VEGAS Pro 14 or higher</li>
-          <li>🔑 Lifetime license with free updates</li>
-          <li>📖 Tutorial and support included</li>
+          <li>VEGAS Pro 14+</li>
+          <li>Lifetime License</li>
+          <li>Support Included</li>
         </ul>
       </div>
     </div>
   </section>
+
 
   <!-- === PURCHASE & CONTACT === -->
   <section id="purchase-contact">
@@ -314,37 +238,29 @@
       <div class="how-to-purchase">
         <h2>🛒 How to Purchase</h2>
         <ol>
-          <li>✅ Send us an email confirming your order.</li>
-          <li>💳 We’ll send you a PayPal or Stripe payment link.</li>
-          <li>🔑 Once payment is confirmed, you’ll receive your serial key instantly.</li>
+          <li>Send us an email confirming your order.</li>
+          <li>We’ll send you a PayPal or Stripe link.</li>
+          <li>You receive your serial key instantly.</li>
         </ol>
         <p>If you have any questions, please feel free to contact us.</p>
       </div>
 
-      <div class="side-by-side">
-        <div class="pricing-box">
-          <h2>Get it Now</h2>
-          <div class="card">
-            <h3>Full Version</h3>
-            <p><strong>US$ 69</strong> – Lifetime License</p>
-            <p>Secure purchase via <strong>PayPal</strong> or <strong>Stripe</strong> (coming soon).</p>
-            <p><em>Your serial number will be delivered by email once the payment is confirmed.</em></p>
-            <a class="btn-primary" href="#contact">Stripe Link Coming Soon</a>
-          </div>
-        </div>
+      <!-- REMOVIDO: bloco "Get It Now" -->
 
+      <div class="side-by-side">
         <div class="contact-box" id="contact">
           <h2>Contact Us</h2>
           <form action="https://formspree.io/f/xvgagnja" method="POST">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="Auto Captions for VEGAS Pro Purchase/Support">
-            <input type="text" name="name" placeholder="Your name" required><br>
-            <input type="email" name="email" placeholder="Your email" required><br>
-            <textarea name="message" placeholder="Write your message here" rows="10"></textarea><br>
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Write your message here"></textarea>
             <button type="submit" class="btn-primary">Send Message</button>
           </form>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -354,9 +270,5 @@
     </div>
   </footer>
 
-  <!-- Floating Buy Button -->
-  <!--
-  <a href="#purchase-contact" id="floating-buy">💳 Buy Now</a>
 </body>
 </html>
-  -->
