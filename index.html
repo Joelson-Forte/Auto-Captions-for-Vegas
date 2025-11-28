@@ -1,31 +1,3 @@
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Under Maintenance</title>
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      font-size: 2rem;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  Under Maintenance
-</body>
-</html>
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,8 +48,8 @@
       display: inline-block;
       margin: 8px;
       transition: background 0.3s ease;
-      min-width: 220px;     /* 🔧 força mesmo tamanho */
-      text-align: center;   /* 🔧 centraliza texto */
+      min-width: 220px;
+      text-align: center;
     }
     .btn-primary:hover { background-color: #0b60d1; }
 
@@ -171,7 +143,7 @@
       flex-wrap: wrap;
     }
 
-    .pricing-box, .contact-box {
+    .contact-box {
       background-color: #1a1a1a;
       border: 1px solid #2b2b2b;
       border-radius: 10px;
@@ -182,35 +154,11 @@
       justify-content: space-between;
     }
 
-    .pricing-box h2, .contact-box h2 {
+    .contact-box h2 {
       text-align: center;
       color: #fff;
       margin-bottom: 20px;
     }
-
-    .pricing-box {
-      align-items: center;
-      text-align: center;
-    }
-
-    .pricing-box .card {
-      background-color: #202020;
-      border: 1px solid #333;
-      border-radius: 10px;
-      padding: 25px;
-      width: 100%;
-      max-width: 300px;
-      color: #e6e6e6;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-    }
-
-    .pricing-box .card h3 { color: #1e90ff; margin-bottom: 15px; }
-    .pricing-box .card p { color: #d6d6d6; margin-bottom: 12px; }
 
     .contact-box form {
       flex: 1;
@@ -262,26 +210,24 @@
 <body>
   
   <!-- === HERO === -->
-  
   <header id="hero">
     <div class="container">
       <img src="logo.png" alt="Auto Captions Logo">
       <h1>Auto Captions for VEGAS Pro</h1>
       <p>Audio Transcription and Subtitle Creation</p>
+
       <div class="btn-group">
         <a class="btn-primary" href="https://huggingface.co/datasets/Joelson-Forte/Auto-Captions-for-Vegas/resolve/main/Auto_Captions_v2.0.7_for_VEGAS_Pro.zip?download=true" target="_blank" rel="noopener noreferrer">
           Download v2.0.7
         </a>
-        <a class="btn-primary" href="#purchase-contact">
-          Get Full Version
-        </a>
+        <!-- REMOVIDO: Botão Get Full Version -->
       </div>
+
       <p style="margin-top:12px; color:#ffffff; font-weight:bold;">15 Days Free Trial Evaluation</p>
     </div>
   </header>
 
   <!-- === DEMO === -->
-
   <section id="demo">
     <div class="container">
       <h2>🎬 See Auto Captions for VEGAS Pro in Action</h2>
@@ -293,7 +239,6 @@
   </section>
 
   <!-- === FEATURES === -->
-
   <section id="auto-captions-features">
     <div class="container">
       <h2>✨ Key Features of Auto Captions for VEGAS Pro</h2>
@@ -341,7 +286,6 @@
   </section>
 
   <!-- === PURCHASE & CONTACT === -->
-
   <section id="purchase-contact">
     <div class="container">
       <div class="how-to-purchase">
@@ -354,17 +298,8 @@
         <p>If you have any questions, please feel free to contact us.</p>
       </div>
 
-      <div class="side-by-side">
-        <div class="pricing-box">
-          <h2>Get it Now</h2>
-          <div class="card">
-            <h3>Full Version</h3>
-            <p><strong>Get an </strong>Lifetime License</p>
-            <p>Secure purchase via <strong>PayPal</strong> or <strong>Stripe</strong> (coming soon).</p>
-            <p><em>Your serial number will be delivered by email once the payment is confirmed.</em></p>
-            <a class="btn-primary" href="#contact">Stripe Link</br>(Coming Soon)</a>
-          </div>
-        </div>
+      <div class="side-by-side" style="justify-content:center;">
+        <!-- REMOVIDO: bloco completo "Get it Now" -->
 
         <div class="contact-box" id="contact">
           <h2>Contact Us</h2>
@@ -378,6 +313,7 @@
           </form>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -390,6 +326,6 @@
   <!-- Floating Buy Button -->
   <!--
   <a href="#purchase-contact" id="floating-buy">💳 Buy Now</a>
+  -->
 </body>
 </html>
--->
