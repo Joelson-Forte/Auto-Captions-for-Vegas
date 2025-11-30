@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Auto Captions for VEGAS Pro - Audio Transcription and Subtitle Creation" />
+  <meta name="keywords" content="VEGAS Pro, subtitles, captions, transcription, AI, Auto Captions, video editing" />
+  <meta property="og:title" content="Auto Captions for VEGAS Pro – Automatic Subtitles Tool" />
+  <meta property="og:description" content="Create professional subtitles automatically in VEGAS Pro. Free trial available." />
+  <meta property="og:image" content="https://joelson-forte.github.io/Auto-Captions-for-Vegas/logo.png" />
+  <meta property="og:type" content="website" />
+  <title>Auto Captions for VEGAS Pro</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* === Base === */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    .container { width: 80%; margin: 0 auto; padding: 20px; }
 
+    /* === Hero === */
+    #hero {
+      background-color: #000;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+    }
+    #hero img {
+      width: 120px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
+    }
+    #hero h1 { font-size: 2.6rem; margin-bottom: 10px; }
+    #hero p { font-size: 1.2rem; color: #ccc; }
+
+    .btn-group { margin-top: 25px; }
+    .btn-primary {
+      background-color: #1e90ff;
+      color: #fff;
+      padding: 12px 22px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin: 8px;
+      transition: background 0.3s ease;
+      min-width: 220px;
+      text-align: center;
+    }
+    .btn-primary:hover { background-color: #0b60d1; }
+
+    /* === Demo === */
+    #demo {
+      text-align: center;
+      margin-top: 40px;
+      padding: 50px 0;
+      background-color: #1e1e1e;
+    }
+    #demo h2 { color: #fff; margin-bottom: 30px; }
+    #demo h3 { color: #1e90ff; margin-top: 40px; margin-bottom: 10px; }
+    #demo iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 8px;
+      border: 2px solid #333;
+    }
+
+    /* === Features === */
+    #auto-captions-features {
+      background-color: #181818;
+      padding: 50px 0;
+    }
+    #auto-captions-features h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+    #auto-captions-features h3 {
+      color: #1e90ff;
+      margin-bottom: 10px;
+    }
+    #auto-captions-features p, 
+    #auto-captions-features li { color: #ddd; }
+    #auto-captions-features ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    /* === Contact Only === */
+    #purchase-contact {
+      background-color: #161616;
+      padding: 60px 0;
+    }
+
+    .side-by-side {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .contact-box {
+      background-color: #1a1a1a;
+      border: 1px solid #2b2b2b;
+      border-radius: 10px;
+      padding: 25px;
+      width: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-box h2 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .contact-box form input,
+    .contact-box form textarea {
+      width: 100%;
+      background-color: #1f1f1f;
+      color: #e6e6e6;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #333;
+      border-radius: 4px;
+    }
+    .contact-box form textarea { height: 220px; }
+
+    .contact-box form button {
+      display: block;
+      margin: 20px auto 0 auto;
+      background-color: #1e90ff;
+      color: #fff;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* === Footer === */
+    footer {
+      background-color: #000;
+      color: #9a9a9a;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- === HERO === -->
+  <header id="hero">
+    <div class="container">
+      <img src="logo.png" alt="Auto Captions Logo">
+      <h1>Auto Captions for VEGAS Pro</h1>
+      <p>Audio Transcription and Subtitle Creation</p>
+
+      <div class="btn-group">
+        <a class="btn-primary" href="https://huggingface.co/datasets/Joelson-Forte/Auto-Captions-for-Vegas/resolve/main/Auto_Captions_v2.0.7_for_VEGAS_Pro.zip?download=true" target="_blank" rel="noopener noreferrer">
+          Download v2.0.7
+        </a>
+      </div>
+
+      <p style="margin-top:12px; color:#ffffff; font-weight:bold;">This version is for registered users only. If you do not have a serial number, this version will not work.</p>
+    </div>
+  </header>
+
+  <!-- === DEMO === -->
+  <section id="demo">
+    <div class="container">
+      <h2>🎬 See Auto Captions for VEGAS Pro in Action</h2>
+      <h3>Demo 1 – Audio Transcription</h3>
+      <iframe src="https://www.youtube.com/embed/qLxbUbJ3Fxg" frameborder="0" allowfullscreen></iframe>
+      <h3>Demo 2 – Animated Captions</h3>
+      <iframe src="https://www.youtube.com/embed/q_mTQUC69Ng" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- === FEATURES === -->
+
+  <section id="auto-captions-features">
+    <div class="container">
+      <h2>✨ Key Features of Auto Captions for VEGAS Pro</h2>
+
+      <div class="feature-block">
+        <h3>High-Performance & Offline Capability</h3>
+        <p>Auto Captions delivers top-tier transcription quality while maintaining complete privacy with 100% offline processing.</p>
+        <ul>
+          <li>⚡ GPU Acceleration (NVIDIA CUDA)</li>
+          <li>💻 CPU Support (no GPU required)</li>
+          <li>🌐 100% Offline — no internet needed</li>
+          <li>🚫 No character or time limits</li>
+        </ul>
+      </div>
+
+      <div class="feature-block">
+        <h3>Advanced Subtitle Creation & Translation</h3>
+        <ul>
+          <li>🎥 Subtitle Animation via Aegisub Integration</li>
+          <li>📝 Caption Editing with Subtitle Edit</li>
+          <li>🌎 Easy multilingual translation</li>
+          <li>🎵 Auto Lyrics for songs and music</li>
+        </ul>
+      </div>
+
+      <div class="feature-block">
+        <h3>Flexible Transcription Workflow in VEGAS Pro</h3>
+        <ul>
+          <li>✅ Selected Events — process multiple clips</li>
+          <li>⏱️ Timeline Selection (Loop Region)</li>
+          <li>🏷️ Region Markers for segmented processing</li>
+          <li>📦 Batch Transcription — handle entire sequences</li>
+        </ul>
+      </div>
+
+      <div class="feature-block">
+        <h3>Compatibility & License</h3>
+        <ul>
+          <li>⚙️ Compatible with MAGIX VEGAS Pro 14 or higher</li>
+          <li>🔑 Lifetime license with free updates</li>
+          <li>📖 Tutorial and support included</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- === CONTACT ONLY === -->
+  <section id="purchase-contact">
+    <div class="container">
+
+      <div class="side-by-side" style="justify-content:center;">
+        <div class="contact-box" id="contact">
+          <h2>Contact Us</h2>
+          <form action="https://formspree.io/f/xvgagnja" method="POST">
+            <input type="text" name="name" placeholder="Your name" required><br>
+            <input type="email" name="email" placeholder="Your email" required><br>
+            <textarea name="message" placeholder="Write your message here"></textarea><br>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <!-- <p>Contact and Support: joelsonforte.br@gmail.com</p> -->
+    </div>
+  </footer>
+</body>
+</html>
